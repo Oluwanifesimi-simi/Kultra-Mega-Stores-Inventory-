@@ -43,8 +43,10 @@ from[dbo].[KMS Sql Case Study]
 join order_status
 on order_status.order_id=[dbo].[KMS Sql Case Study].order_id  ``` </pre>
 
+### Answering the Eleventh question and insight
+To evaluate whether Kultra Mega Stores (KMS) is aligning its shipping method choices appropriately with order priority levels, considering the cost and speed implications of each method with a breakdown.
 
-<pre lang="markdown"> ```sql /*------11. If the delivery truck is the most economical but the slowest, shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer*/
+<pre lang="markdown"> ```sql 
 
 SELECT 
   Order_Priority, Ship_Mode, 
@@ -53,4 +55,42 @@ SELECT
   FROM [dbo].[KMS Sql Case Study] 
   GROUP BY Order_Priority, Ship_Mode 
   ORDER BY Order_Priority, Sum_Shipping_Cost DESC ``` </pre>
+  
+![Insight 11](https://github.com/Oluwanifesimi-simi/Kultra-Mega-Stores-Inventory-/blob/main/SQL-Findings/Insight.png?raw=true)
+
+**Background:**
+KMS utilizes three main shipping methods:
+
+Express Air – Fastest and most expensive
+
+Regular Air – Moderate speed and cost
+
+Delivery Truck – Slowest but most economical
+
+It is expected that higher-priority orders (e.g., Critical or High) should be shipped using faster methods, while lower-priority orders (Low, Medium, Not Specified) should favor economical options.
+
+**Findings:**
+
+For Critical orders, Express Air (expected) was only used 200 times, while Delivery Truck was used more frequently (228 times), potentially impacting delivery speed.
+
+Regular Air accounted for the highest number of shipments for Critical orders (1,180 times), showing some prioritization but inconsistent policy adherence.
+
+Low and Medium priority orders still had significant use of Express Air, which is cost-inefficient given the lower urgency.
+
+Delivery Truck, despite being the slowest, was used frequently even for High-priority orders, suggesting mismatched logistics decisions.
+
+**conclusions** 
+There is a lack of clear alignment between order priority and shipping methods. KMS appears to overspend on Express Air for low-priority shipments and under-utilize it for critical ones, undermining both cost-efficiency and delivery effectiveness.
+
+**Recommendation:**
+KMS should establish a shipping policy framework that aligns methods with order priority levels:
+
+Critical/High Priority → Use Express Air or Regular Air
+
+Medium/Low Priority → Use Regular Air or Delivery Truck
+
+Implementing this alignment will optimize shipping costs while maintaining service quality.
+
+## NOTE:
+More insights, findings, and their results are in the file attached to this README.md file 📂. 
 
