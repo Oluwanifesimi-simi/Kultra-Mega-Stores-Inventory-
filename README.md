@@ -101,6 +101,8 @@ Implementing this alignment will optimize shipping costs while maintaining servi
 
 ## NOTE:
 More insights, findings, and their results are in the file attached to this README.md file 📂. 
+
 [Screenshot with insights and results](https://github.com/Oluwanifesimi-simi/Kultra-Mega-Stores-Inventory-/tree/main/SQL-Findings)
 
+[SQL Syntaxes](https://github.com/Oluwanifesimi-simi/Kultra-Mega-Stores-Inventory-/blob/main/Capstone%20project%20%5BKMS%20sql%20Case%20Study%5D.sql) 
 
