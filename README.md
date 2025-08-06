@@ -27,4 +27,30 @@ Breaking into this analysis as my capstone project with DSA(The Incubator Hub), 
 - Tracked returned orders, identifying the responsible customers and their segment.
 
 - Assessed whether shipping costs were efficiently aligned with order priority, comparing Express Air and Delivery Truck usage against urgency levels.
+  
+## Data Integration and Normalization
+To ensure efficiency getting calculated columns and insights rightly, I joined the order dataset with the fact table dataset with:
+
+<pre lang="markdown"> ```------JOINING THE KMS AND ORDER STATUS TABLE
+	select
+	order_status.order_id,
+	order_status.Status,
+---[KMS Sql Case Study].row_id,
+[dbo].[KMS Sql Case Study].order_id,
+[dbo].[KMS Sql Case Study].customer_name,
+[dbo].[KMS Sql Case Study].customer_segment
+from[dbo].[KMS Sql Case Study]
+join order_status
+on order_status.order_id=[dbo].[KMS Sql Case Study].order_id  ``` </pre>
+
+
+<pre lang="markdown"> ```sql /*------11. If the delivery truck is the most economical but the slowest, shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer*/
+
+SELECT 
+  Order_Priority, Ship_Mode, 
+  COUNT(*) AS Order_Count, 
+  sum(Shipping_Cost) AS Sum_Shipping_Cost 
+  FROM [dbo].[KMS Sql Case Study] 
+  GROUP BY Order_Priority, Ship_Mode 
+  ORDER BY Order_Priority, Sum_Shipping_Cost DESC ``` </pre>
 
