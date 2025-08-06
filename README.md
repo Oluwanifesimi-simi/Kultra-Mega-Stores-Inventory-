@@ -1,7 +1,7 @@
 # Kultra-Mega-Stores-Inventory-
 Kultra Mega Stores (KMS), is a company focused on office supplies and furniture in Nigeria, that serves individuals, small businesses, and corporate clients nationwide. To support data-driven decisions, KMS commissioned a business insight report for its Abuja division to uncover key trends and improve regional performance.
 
-Breaking into this analysis, it was structured into two case scenarios covering product performance, regional sales trends, shipping efficiency, and customer segmentation.
+Breaking into this analysis as my capstone project with DSA(The Incubator Hub), it was structured into two case scenarios covering product performance, regional sales trends, shipping efficiency, and customer segmentation.
 
 ## 🔍 Key Insights & Findings:
 **Case Scenario I: Sales & Operations Overview**
