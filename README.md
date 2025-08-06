@@ -71,6 +71,12 @@ It is expected that higher-priority orders (e.g., Critical or High) should be sh
 
 **Findings:**
 
+| Shipping_Method | Critical_Orders | High_Priority | Medium_Priority | Low_Priority | Not_Specified |
+|-----------------|-----------------|---------------|-----------------|--------------|---------------|
+| Delivery Truck  | 228 orders,₦10,783.82 | 248 orders,₦11,206.88 | 205 orders, ₦9,461.62 | 250 orders, ₦11,131.61 | 215 orders, ₦9,388.01 |
+| Regular Air | 1,180 orders, ₦8,586.76 | 1,308 orders, ₦10,005.01 | 1,225 orders, ₦9,418.72 | 1,280 orders, ₦10,263.62 | 1,277 orders, ₦9,734.08 |
+| Express Air | 200 orders, ₦1,742.10 | 212 orders, ₦1,453.53 | 201 orders, ₦1,633.59 | 190 orders, ₦1,551.63 | 180 orders, ₦1,470.06 |
+
 For Critical orders, Express Air (expected) was only used 200 times, while Delivery Truck was used more frequently (228 times), potentially impacting delivery speed.
 
 Regular Air accounted for the highest number of shipments for Critical orders (1,180 times), showing some prioritization but inconsistent policy adherence.
@@ -90,6 +96,8 @@ Critical/High Priority → Use Express Air or Regular Air
 Medium/Low Priority → Use Regular Air or Delivery Truck
 
 Implementing this alignment will optimize shipping costs while maintaining service quality.
+
+
 
 ## NOTE:
 More insights, findings, and their results are in the file attached to this README.md file 📂. 
